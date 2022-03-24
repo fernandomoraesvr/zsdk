@@ -6,16 +6,21 @@ Pod::Spec.new do |s|
   s.version          = '0.0.1'
   s.summary          = 'Zebra Link OS SDK Flutter'
   s.description      = <<-DESC
-Zebra Link OS SDK Flutter
+Zebra Link OS SDK Flutter Pod
                        DESC
   s.homepage         = 'http://example.com'
-  s.license          = { :file => '../LICENSE' }
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
+  s.static_framework = true
+
+  s.ios.vendored_libraries = 'Libs/zsdk/zsdk.a'
+
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' } 
 end
 
