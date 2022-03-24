@@ -3,7 +3,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'zsdk'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Zebra Link OS SDK Flutter'
   s.description      = <<-DESC
 Zebra Link OS SDK Flutter Pod
